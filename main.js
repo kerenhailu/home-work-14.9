@@ -146,19 +146,22 @@ var fiveCar=[{degam:"aaa",year:"2001",price:"100",img:"https://pixabay.com/photo
 {degam:"aaa",year:"2011",price:"1080",img:"https://pixabay.com/photos/beach-sea-footprints-sand-6292382/",Discount:40},
 {degam:"aaa",year:"2021",price:"1005",img:"https://pixabay.com/photos/beach-sea-footprints-sand-6292382/",Discount:50}]
 for (let i = 0; i < fiveCar.length; i++) {
-    document.write(`degam:${fiveCar[i].degam}year: ${fiveCar[i].year} price after Discount: ${fiveCar[i].price}%${fiveCar[i].Discount} img: <img src="${fiveCar[i].img}"><br>`)
+    document.write(`degam:${fiveCar[i].degam}<br>
+    year: ${fiveCar[i].year}<br>
+    price after Discount: ${fiveCar[i].price-(fiveCar[i].price*fiveCar[i].Discount)}<br>
+    img: <img src="${fiveCar[i].img}"><br>`)
     // document.write(fiveCar[i].price.sort() )
 switch(fiveCar[i].Discount){
-    case "25%":
+    case 25:
         alert("crazy sel")
         break;
-        case "10%":
+        case 10:
         alert("good deal for you")
         break;
-        case "7%":
+        case 7:
         alert("not bad")
         break;
-        case "3%":
+        case 3:
         alert("this is joke")
         break;
 }
